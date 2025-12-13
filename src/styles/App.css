@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* Particle container */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(#00eaff 1px, transparent 1px),
+    radial-gradient(#00eaff 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+  background-position: 0 0, 20px 20px;
+
+  animation: floatParticles 15s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes floatParticles {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-200px); }
+}

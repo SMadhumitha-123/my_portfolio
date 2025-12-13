@@ -1,0 +1,145 @@
+/* Main Section */
+.education-section {
+  background-color: #111111;
+  color: white;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* include padding in width */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Cards Container */
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+/* Individual Card */
+.education-card {
+  background: #111;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;      /* ensures padding included in width */
+  word-wrap: break-word;       /* wrap long text */
+  overflow-wrap: break-word;   /* wrap long words */
+  width: 100%;                 /* fill container */
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+/* Card Content */
+.education-card h3 {
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.education-card h4 {
+  color: #00ffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.education-card p {
+  color: #cccccc;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.education-year {
+  display: block;
+  font-weight: bold;
+  color: #0ff0ff;
+  margin-bottom: 0.8rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.grade {
+  font-weight: bold;
+  color: #00ffff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .education-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .education-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .education-card h4 {
+    font-size: 1rem;
+  }
+
+  .education-card p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+
+  .education-year {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .education-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .education-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .education-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .education-card p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .education-year {
+    font-size: 0.9rem;
+  }
+}

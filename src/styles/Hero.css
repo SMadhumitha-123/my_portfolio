@@ -1,0 +1,24 @@
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* space between buttons */
+}
+
+.cta-button.blue {
+  background-color: #0d0d0d; /* dark background for neon effect */
+  color: #00f0ff; /* neon cyan text */
+  border: 2px solid #00f0ff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+}
+
+.cta-button.blue:hover {
+  color: #ffffff;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 80px #00f0ff;
+  transform: scale(1.05);
+}

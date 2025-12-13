@@ -1,0 +1,35 @@
+.about-container {
+  background-color: rgba(255, 255, 255, 0.05); /* semi-transparent container */
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); /* subtle neon glow */
+}
+
+.about-section {
+  padding: 5rem 2rem;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #c0c0c0;
+}
+
+.highlight {
+  color: #0ff0ff;
+  text-shadow: 0 0 5px #0ff0ff, 0 0 10px #00ffff;
+  font-weight: bold;
+}

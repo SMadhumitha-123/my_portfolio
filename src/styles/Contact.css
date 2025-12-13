@@ -1,0 +1,101 @@
+.contact-section {
+  padding: 5rem 2rem;
+  background-color:#111111; /* Same dark background as About section */
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.8; /* Added for spacing between lines */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  line-height: 1.3; /* spacing for heading */
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* increased gap for inputs & textarea */
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #00ffff;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  resize: none;
+  transition: all 0.3s ease;
+  line-height: 1.5; /* space inside multi-line textarea */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0ff0ff;
+  box-shadow: 0 0 10px #0ff0ff;
+}
+
+.contact-form button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #00ffff50;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0ff0ff;
+}
+
+.contact-info {
+  max-width: 300px;
+  text-align: left;
+  line-height: 2; /* more spacing between info lines */
+}
+
+.contact-info h3 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ffff, 0 0 15px #0ff0ff;
+  line-height: 1.4;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c0c0c0;
+  line-height: 1.8; /* increase spacing between each line of text */
+}
+
+.social-icons a {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0ff0ff;
+  transform: scale(1.2) rotate(10deg);
+  text-shadow: 0 0 15px #0ff0ff, 0 0 25px #00ffff;
+}

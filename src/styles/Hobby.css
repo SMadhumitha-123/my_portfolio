@@ -1,0 +1,220 @@
+/* =========================
+   Section
+========================= */
+.bento-section {
+  padding: 5rem 2rem;
+  background-color:#0d0d0d;
+  color: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.hobby-description {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  color: #cccccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   Carousel Container
+========================= */
+.carousel-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Carousel Slide (Clean Frame)
+========================= */
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 400px;
+
+  border: 2px solid #00ffff;
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 25px #00ffff40,
+    0 0 45px #00ffff20;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   Mandala Layer 1 (Outer)
+========================= */
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>\
+<g fill='none' stroke='cyan' stroke-width='1' opacity='0.18'>\
+<circle cx='100' cy='100' r='92'/>\
+<circle cx='100' cy='100' r='72'/>\
+<circle cx='100' cy='100' r='52'/>\
+<circle cx='100' cy='100' r='32'/>\
+<line x1='100' y1='4' x2='100' y2='196'/>\
+<line x1='4' y1='100' x2='196' y2='100'/>\
+</g>\
+</svg>");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+
+  filter: drop-shadow(0 0 8px cyan);
+  animation: mandalaRotateSlow 36s linear infinite;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =========================
+   Mandala Layer 2 (Inner)
+========================= */
+.carousel-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>\
+<g fill='none' stroke='cyan' stroke-width='1' opacity='0.12'>\
+<circle cx='100' cy='100' r='60'/>\
+<circle cx='100' cy='100' r='40'/>\
+<circle cx='100' cy='100' r='20'/>\
+<line x1='30' y1='30' x2='170' y2='170'/>\
+<line x1='170' y1='30' x2='30' y2='170'/>\
+</g>\
+</svg>");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+
+  filter: drop-shadow(0 0 6px cyan);
+  animation: mandalaRotateFast 24s linear infinite reverse;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =========================
+   Image (Above Mandala)
+========================= */
+.carousel-slide img {
+  position: relative;
+  z-index: 2;
+
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 14px;
+
+  transition: transform 0.3s ease;
+}
+
+/* =========================
+   Hover Effect
+========================= */
+.carousel-slide:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Carousel Buttons
+========================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffff60;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+.carousel-btn.left {
+  left: -60px;
+}
+
+.carousel-btn.right {
+  right: -60px;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes mandalaRotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mandalaRotateFast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  .carousel-container {
+    max-width: 90%;
+  }
+
+  .carousel-slide {
+    height: 260px;
+  }
+
+  .carousel-btn.left {
+    left: -40px;
+  }
+
+  .carousel-btn.right {
+    right: -40px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hobby-description {
+    font-size: 1rem;
+  }
+}

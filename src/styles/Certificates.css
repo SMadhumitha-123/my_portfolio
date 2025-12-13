@@ -1,0 +1,99 @@
+.cert-section {
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  margin-bottom: 2.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.logo-item {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.logo-item:hover {
+  transform: scale(1.1);
+}
+
+.cert-logo {
+  width: 100px;       /* fixed width */
+  height: 100px;      /* fixed height */
+  object-fit: contain; /* maintain aspect ratio without stretching */
+  margin-bottom: 0.5rem;
+  background: #4e5a5b;    /* optional: adds background if logos have transparency */
+  padding: 10px;       /* optional: add space around logo */
+  border-radius: 8px;  /* optional: rounded corners */
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-inner {
+  position: relative;
+}
+
+.modal-content {
+  max-width: 80vw;
+  max-height: 80vh;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #00ffff;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00ffff;
+  user-select: none;
+}
+.arrow.left {
+  left: -50px;
+}
+.arrow.right {
+  right: -50px;
+}
+
+@media (max-width: 768px) {
+  .arrow.left {
+    left: -30px;
+  }
+  .arrow.right {
+    right: -30px;
+  }
+  .cert-logo {
+    width: 80px;
+  }
+}
