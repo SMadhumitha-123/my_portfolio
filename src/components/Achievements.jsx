@@ -12,12 +12,12 @@ import ach5 from "../assets/ach5.jpeg";
 import ach6 from "../assets/ach6.jpeg";
 
 const achievementsData = [
-  { img: ach1, desc: "Completed React Basics Certification" },
-  { img: ach2, desc: "Mastered JavaScript Advanced Concepts" },
-  { img: ach3, desc: "Built Interactive Web Apps" },
-  { img: ach4, desc: "Completed Data Structures Certification" },
-  { img: ach5, desc: "Solved Complex Problems Efficiently" },
-  { img: ach6, desc: "Designed Modern UI/UX Interfaces" },
+  { img: ach1, desc: "Secured Rank 1 in Academic Year 2023-2024" },
+  { img: ach2, desc: "Secured Thrid Prize in National Voter's Day 2024 Inland Letter Writing Competition" },
+  { img: ach3, desc: "Presented a Research Article in a Global Conference" },
+  { img: ach4, desc: "Secured 86th Rank in CodeQuezt Contest:DSA by Naukri Campus" },
+  { img: ach5, desc: "Secured Thrid Prize in National Voter's Day 2024 Inland Letter Writing Competition" },
+  { img: ach6, desc: "Secured Second prize in 'Minutes_to_Win' contest conducted by CSI branch" },
 ];
 
 const Achievements = () => {

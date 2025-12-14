@@ -8,9 +8,10 @@ import hobby4 from "../assets/hobby4.jpeg";
 import hobby5 from "../assets/hobby5.jpeg";
 import hobby6 from "../assets/hobby6.jpeg";
 import hobby7 from "../assets/hobby7.jpeg";
+import hobby8 from "../assets/hobby8.jpeg";
 
 const images = [
-  hobby1, hobby2, hobby3, hobby4, hobby5, hobby6, hobby7
+  hobby1, hobby2, hobby3, hobby4, hobby5, hobby6, hobby7,hobby8
 ];
 
 const HobbyCarousel = () => {
